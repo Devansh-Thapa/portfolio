@@ -1,6 +1,6 @@
 import React from "react";
 //if nay problem occur in deployment change BrowerRouter to hashRouter
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRoute, HashRouter, Route } from "react-router-dom";
 import "./App.css";
 import About from "./About/About";
 import Skills from "./Skills/Skills";
@@ -13,7 +13,7 @@ import GoHome from "./GoHome/GoHome";
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <div>
           <NavBar />
           <Route path="/" exact component={Home} />
@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/contact" exact component={Contact} />
           <GoHome />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
